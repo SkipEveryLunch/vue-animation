@@ -35,10 +35,8 @@ export default {
   setup() {
     const showP = ref(false);
     const beforeEnter = (el) => {
-      gsap.from(el, {
-        y: -30,
-        opacity: 0,
-      });
+      el.style.transform = 'translateY(-30px)';
+      el.style.opacity = 0;
     };
     const enter = (el, done) => {
       gsap.to(el, {
